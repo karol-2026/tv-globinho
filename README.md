@@ -1,1 +1,1 @@
-# Conhe-a-a-TV-Globinho
+# TV-Globinho
