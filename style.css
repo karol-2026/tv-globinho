@@ -1,8 +1,17 @@
 body {
-    background-color: aqua;
+    background-color: rgb(53, 61, 61);
 
 }
 
+#navbar {
+    position: sticky;
+    top: 0;
+    padding: 1rem o;
+    background-color: var(--cor-fundo-escuro);
+    border-bottom: 1 px solid var(--cor-borda);
+    z-index: 100;
+}
+  
 .nav-container {
     display: flex;
     justify-content: space-between; /* Logo na esquerda, links na direita */
@@ -10,6 +19,29 @@ body {
     max-width: var(--largura-maxima);
     margin: 0 auto;
     padding: 0 1.5rem;
-  }
+}
+
+.nav-logo {
+    font-family: var(--fonte-display);
+    font-size: 1.7rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+  
+.logo-destaque {
+    color: var(--cor-primaria);
+}
+  
+.nav-links {
+    display: flex;
+    gap: 2rem; /* Espaço entre cada link do menu */
+}
+  
+.nav-links a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--cor-texto-suave);
+    letter-spacing: 0.5px;
+}
 
   
