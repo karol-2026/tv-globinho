@@ -21,26 +21,27 @@ img {
     background-color:#000000;
     width: 99%;
     border-bottom:solid  rgb(32, 31, 31);;
-    z-index: 100;
+    z-index: 100;                   /* Sobreposição de itens */
     border-radius: 20px;
     margin: 0% auto;
 }
   
+/* espaço entre letras */
 .nav-container {
-    display: flex;
+    display: flex;                  /* Ocupação dos itens no espaço */
     justify-content: space-between; /* Logo na esquerda, links na direita */
     align-items: center;            /* Alinha verticalmente no centro */
-    margin: 0% auto;
-    padding: 0 1.5rem;
+    margin: 0% auto;                /* Margem: top/base 0. left/rigth ocupa livremente  */
+    padding: 0 1.5rem;              /* padding: top/base 0. left/rigth espaço lateral  */
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
-    font-family: display;
-    font-size: 1.7rem;
-    font-weight: 100;
-    letter-spacing: 1px;
+    font-family: display;           /* fonte padrão */
+    font-size: 1.7rem;              /* fonte tamanho */
+    font-weight: 100;               /* fonte espessura */
+    letter-spacing: 1px;            /* espaço entre letras */
     border: solid 0.2rem;
     border-radius: 10px;
     padding: 10px 0 0 0;
@@ -64,9 +65,9 @@ img {
 
 .nav-hamburger {
     display: none;
-    cursor: pointer;
+    cursor: pointer;                /* cursor vira mãozinha */
     font-size: 1.8rem;
-    line-height: 1;
+    line-height: 1;                 /* altura da linha*/
     color: rgb(20, 197, 241);
     padding: 0 0.5rem;
 }
@@ -89,7 +90,7 @@ img {
     background-color: #0d30f5;
     text-align: center;
     border-radius: 20px;
-    max-width: 100%;
+    max-width: 100%;                /* largura não passa de 100% */
 }
 
 .tv-globinho {
@@ -102,9 +103,9 @@ img {
     background-color: #060b2c;
     color: #ffffff;
     font-family: "Caveat", cursive;
-    font-optical-sizing: auto;
+    font-optical-sizing: auto;          /* site ajusta automaticamente o desenho das letras*/
     font-weight: weight;
-    font-style: normal;
+    font-style: normal;                 /* sem italico*/
     line-height: 1.8;
 }
 
@@ -132,7 +133,7 @@ img {
 
 .part1 {
     display: flex;           /* Coloca os elementos lado a lado */
-    flex-wrap: wrap;
+    flex-wrap: wrap;         /* Permite quebrar iten para a proxima linha */
     align-items: center;     /* Alinha verticalmente */
     justify-content: center;
     gap: 15px;               /* Espaço entre imagem e texto */
@@ -141,7 +142,7 @@ img {
     border-radius: 20px;
     border-color: #ffffff;
     margin: auto 80px;
-    clip-path: polygon(20px 0%, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
+    clip-path: polygon(20px 0%, 100% 0%, calc(100% - 20px) 100%, 0% 100%);      /* recorta o elemento em forma geometrica. calc: de 100% de larg. diminui 20px*/
 }
 
 .texto-1 {
@@ -156,7 +157,7 @@ img {
     font-size: 150%;
     margin: auto 0px;
     padding: 0 1.5rem;
-    flex: 1 1 260px;
+    flex: 1 1 260px;            /* capacidade de esticar, encolher e o tamanho inicial */
     clip-path: polygon(20px 0%, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
 }
 
@@ -177,7 +178,7 @@ img {
     border-color: #ffffff;
     margin: 0 50px 0 auto;
     clip-path: polygon(20px 0%, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
-    width: 50vw;
+    width: 50vw;            /* 50% do total da largura do site */
 
 }
 
@@ -275,7 +276,7 @@ img {
 
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* criar colunas com o mesmo tamanho sem precisar repetir o cod*/
     gap: 1.5rem;
     padding: 10px 1.5rem 30px;
 }
@@ -285,21 +286,21 @@ img {
     background-color: #060b2c;
     border: solid 2px rgb(20, 197, 241);
     border-radius: 20px;
-    overflow: hidden;
+    overflow: hidden;           /* conteúdo cortado ficara inviivel */
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    transition: transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);          /* sombra da caixa */
+    transition: transform 0.2s ease;                      /* suaviza a animação */
 }
 
 .desenho-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-4px);            /* move o elemento de lugar */
 }
 
 .desenho-card img {
     display: block;
     width: 100%;
-    aspect-ratio: 6 / 7;
-    object-fit: cover;
+    aspect-ratio: 6 / 7;            /* definir uma proporção*/
+    object-fit: cover;              /* preencher completamente a caixa*/
 }
 
 .desenho-card p {
